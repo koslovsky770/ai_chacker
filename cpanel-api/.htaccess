@@ -1,0 +1,16 @@
+# Only api.php should ever be requested directly. Everything else in this
+# folder (config, db helpers, action handlers, migrations) is included by
+# api.php internally and must not be reachable by URL.
+
+<FilesMatch "\.(php)$">
+  Require all denied
+</FilesMatch>
+<Files "api.php">
+  Require all granted
+</Files>
+
+<FilesMatch "\.(sql|md)$">
+  Require all denied
+</FilesMatch>
+
+Options -Indexes

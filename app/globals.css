@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --surface: #f6f7fb;
+  --surface-raised: #ffffff;
+  --ink: #14172b;
+  --ink-muted: #5b5f79;
+  --border: #e3e5f0;
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --primary-contrast: #ffffff;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #d97706;
+
+  --openai: #10a37f;
+  --gemini: #4285f4;
+  --anthropic: #d97757;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-contrast: var(--primary-contrast);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-openai: var(--openai);
+  --color-gemini: var(--gemini);
+  --color-anthropic: var(--anthropic);
+  --font-sans: var(--font-heebo);
+}
+
+body {
+  font-family: var(--font-heebo), system-ui, sans-serif;
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: 0 1px 2px rgba(20, 23, 43, 0.04), 0 8px 24px rgba(20, 23, 43, 0.06);
+  }
+}

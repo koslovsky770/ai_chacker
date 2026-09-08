@@ -92,6 +92,10 @@ export default function LandingPage() {
         © {new Date().getFullYear()} AI Visibility Checker.{" "}
         <a href="/admin" className="underline hover:text-ink">
           כניסת מנהל
+        </a>{" "}
+        ·{" "}
+        <a href="/demo" className="underline hover:text-ink">
+          דמו חי
         </a>
       </footer>
     </div>

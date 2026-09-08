@@ -98,7 +98,9 @@ export function analyzeResponse(input: AnalysisInput): AnalysisResult {
       recommended = true;
       if (position === null && block.index > 0) position = block.index;
       if (!detectedName) detectedName = candidate || businessName;
-    } else if (candidate) {
+    } else if (candidate && hasListStructure && block.index > 0) {
+      // Only real list items (not the intro paragraph before the first
+      // numbered/bulleted entry) are treated as competitor candidates.
       const key = normalizeText(candidate).replace(/\s+/g, "");
       if (key.length > 1 && !seenCompetitorKeys.has(key)) {
         seenCompetitorKeys.add(key);
